@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-bottom: 1px solid #000;
+    }
+
+    .logo {
+        font-size: 40px;
+        font-weight: bold;
+        color: #3f8172;
+        text-decoration: none;
+    }
+
+    .logo:hover{
+        color: #2b574c;
+    }
+
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav li {
+      display: inline-block;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        margin: 10px 15px;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+        color: #52ab98;
+    }
+
+    h1 {
+      color: #000000;
+    }
+
+    .experience h2 {
+      margin-top: 30px;
+      color: #3f8172;
+    }
+
+    .experience p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .experience {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 6px #0000000d;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #3f8172;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 10px 0 0 0;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      background-color: #e1f5f0; 
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Emily Ngo</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Project</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Experiences</h1>
+  <div class="experience">
+  <a href="https://clearascent.co/" class="card-link">
+  <div class="card">
+    <h2>Systems Engineer</h2>
+    <p><strong>Company:</strong> CLEAR ASCENT CORP<br>
+      <strong>Duration:</strong> Jul 2025 – Present<br>
+      <strong>Location:</strong> Seattle, WA
+    </p>
+  </a>
+  </div>
+
+  <a href="https://uwrov.org/" class="card-link">
+  <div class="card">
+    <h2>Electrical Engineer – UWROV</h2>
+    <p><strong>Organization:</strong> Underwater Remotely Operated Vehicles (UROV)<br>
+      <strong>Duration:</strong> Oct 2024 – Present<br>
+      <strong>Learning:</strong> PCB design, soldering & desoldering
+    </p>
+  </a>
+  </div>
+
+  <div class="card">
+    <h2>Mechanical Engineer – UWROV</h2>
+    <p><strong>Duration:</strong> Jan 2024 – Apr 2024<br>
+      <strong>Project:</strong> Built a robot’s manipulator
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Undergraduate Research Assistant</h2>
+    <p><strong>Lab:</strong> Sensor Systems Lab @ UW CSE<br>
+      <strong>Duration:</strong> Sep 2023 - Present<br>
+      <strong>Focus:</strong> Raspberry Pi prototyping, soldering, 3D printing<br>
+      <strong>Skills:</strong> Python, Raspberry Pi
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Embedded Systems Engineer – ENGINE Capstone</h2>
+    <p><strong>Duration:</strong> Jan 2025 – Jun 2025<br>
+      <strong>Work:</strong> Embedded systems with FPGA<br>
+      <strong>Showcase:</strong> ENGINE Showcase 2025
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Hardware Engineer – Husky Coding Project</h2>
+    <p><strong>Duration:</strong> Oct 2024 – May 2025<br>
+      <strong>Project:</strong> Built SproutSynch: automated plant watering system using Raspberry Pi & Arduino<br>
+      <strong>Skills:</strong> Hardware Dev, Hardware Design
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Frontend Web Developer – Husky Coding Project</h2>
+    <p><strong>Duration:</strong> Oct 2023 – Oct 2024<br>
+      <strong>Project:</strong> Aliment (recipe web app)<br>
+      <strong>Skills:</strong> React.js, Node.js
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Software Developer – DubHacks Dev</h2>
+    <p><strong>Duration:</strong> Oct 2024<br>
+      <strong>Project:</strong> AR Snap Spectacles captioning using LLMs<br>
+      <strong>Skills:</strong> LLMs
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>GIS Data Analyst – NASA Space Apps</h2>
+    <p><strong>Duration:</strong> Oct 2024<br>
+      <strong>Project:</strong> Geospatial data in QGIS<br>
+      <strong>Award:</strong> Best Use of Data (2024 Global Finalist)<br>
+      <strong>Tool:</strong> Space Apps Challenge
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Frontend Developer – DubHacks</h2>
+    <p><strong>Duration:</strong> Oct 2023<br>
+      <strong>Project:</strong> AffirmMe (affirmation app)<br>
+      <strong>Skills:</strong> Frontend Dev
+    </p>
+  </div>
+</div>
+</body>
+</html>
