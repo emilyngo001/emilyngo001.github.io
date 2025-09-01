@@ -348,22 +348,52 @@
 
   <script>
     const toggleBtn = document.getElementById("toggleQuarters");
-    const quarters = document.querySelectorAll(".quarter");
+    const cards = document.querySelectorAll(".card");
 
     toggleBtn.addEventListener("click", () => {
-      const isHidden = quarters[0].style.display === "none" || quarters[0].style.display === "";
-      quarters.forEach(q => q.style.display = isHidden ? "block" : "none");
+      const firstQuarter = document.querySelector(".quarter");
+      const isHidden = !firstQuarter || firstQuarter.style.display === "none" || firstQuarter.style.display === "";
+
+      document.querySelectorAll(".quarter").forEach(q => {
+        q.style.display = isHidden ? "block" : "none";
+        const classList = q.nextElementSibling;
+        if (classList) {
+          classList.style.display = "none"; 
+        }
+      });
+
       toggleBtn.textContent = isHidden ? "Hide Quarters" : "Show Quarters";
     });
 
-    quarters.forEach(quarter => {
-      quarter.addEventListener("click", () => {
-        quarter.classList.toggle("active");
-        const classList = quarter.nextElementSibling;
-        classList.style.display = classList.style.display === "block" ? "none" : "block";
+    cards.forEach(card => {
+      card.addEventListener("click", (e) => {
+        if (e.target.classList.contains("quarter")) return;
+
+        const quarters = card.querySelectorAll(".quarter");
+        if (quarters.length === 0) return;
+
+        const isHidden = quarters[0].style.display === "none" || quarters[0].style.display === "";
+        quarters.forEach(q => {
+          q.style.display = isHidden ? "block" : "none";
+          const classList = q.nextElementSibling;
+          if (classList) {
+            classList.style.display = "none"; 
+          }
+        });
       });
     });
-  </script>
+
+  document.querySelectorAll(".quarter").forEach(quarter => {
+    quarter.addEventListener("click", (e) => {
+      e.stopPropagation(); 
+      quarter.classList.toggle("active");
+      const classList = quarter.nextElementSibling;
+      if (classList) {
+        classList.style.display = classList.style.display === "block" ? "none" : "block";
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
