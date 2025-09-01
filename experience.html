@@ -112,6 +112,37 @@
       color: #234e52;
     }
 
+    .personal-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .personal-links .btn {
+      padding: 8px 16px;
+      background-color: #2c7a7b;
+      color: #ffffff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .personal-links .btn:hover {
+      background-color: #285e61;
+    }
+
+    .personal-links .icon-link img {
+      width: fill;
+      height: 24px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .personal-links .icon-link:hover img {
+      transform: scale(1.1);
+    }
+
   </style>
 </head>
 <body>
@@ -126,13 +157,22 @@
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
+    <div class="personal-links">
+    <a href="files/Ngo_Emily_Resume.pdf" target="_blank" class="btn">Resume</a>
+    <a href="https://www.linkedin.com/in/emily-ngo-/" target="_blank" class="icon-link">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/emilyngo001" target="_blank" class="icon-link">
+      <img src="images/github.png" alt="GitHub">
+    </a>
+  </div>
+  
   </header>
 
   <h1>Experiences</h1>
   <div class="experience">
 
     <div class="card">
-      <!-- <img src="https://via.placeholder.com/600x400?text=CLEAR+ASCENT" alt="Clear Ascent"> -->
       <div class="card-content">
         <h2>Systems Engineering Intern</h2>
         <a href="https://clearascent.co/" class="link">
