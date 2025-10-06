@@ -79,6 +79,8 @@
       padding: 20px 30px;
       font-size: 32px;
       color: #234e52;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .intro {
@@ -86,6 +88,8 @@
       padding: 80px 40px 60px;
       position: relative;
       overflow: hidden;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .intro h1{
@@ -109,6 +113,8 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .education {
@@ -116,6 +122,8 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .experience {
@@ -123,6 +131,8 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .projects {
@@ -130,6 +140,8 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .card {
@@ -230,9 +242,14 @@
       color: #2c7a7b;
     }
 
+    .button-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px 20px;
+    }
+
     #toggleQuarters {
       display: block;
-      margin: 0 30px 20px;
       padding: 10px 20px;
       background-color: #2c7a7b;
       color: white;
@@ -250,6 +267,8 @@
 
     p {
       padding: 0px 30px;
+      max-width: 1200px;
+      margin: 16px auto;
     }
 
     .slideshow-container {
@@ -533,7 +552,9 @@
    <section id="education">
     <h1>Education</h1>
       
-      <button id="toggleQuarters">Show Quarters</button>
+      <div class="button-container">
+        <button id="toggleQuarters">Show Quarters</button>
+      </div>
 
       <div class="education">
 
