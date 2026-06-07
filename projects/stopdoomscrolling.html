@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emily Ngo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; 
+    }
+
+    @media (max-width: 768px) {
+      html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 150px; 
+    }
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7fffc;
+      /* background-color: #eefffc;  */
+      /* #ffffff */
+      margin: 0px;
+    }
+
+    footer {
+      text-align: center;
+      color: #4a5568;
+    }
+
+    header {
+      position: sticky;
+      top:0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #ffff;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .logo {
+      font-size: 40px;
+      font-weight: bold;
+      color: #2c7a7b;
+      text-decoration: none;
+    }
+
+    .logo:hover {
+      color: #285e61;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a5568;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #319795;
+    }
+
+    h1 {
+      padding: 20px 30px;
+      font-size: 32px;
+      color: #234e52;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .project-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    }
+
+    .personal-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .personal-links .btn {
+      padding: 8px 16px;
+      background-color: #2c7a7b;
+      color: #ffffff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .personal-links .btn:hover {
+      background-color: #285e61;
+    }
+
+    .personal-links .icon-link img {
+      height: 24px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .personal-links .icon-link:hover img {
+      transform: scale(1.1);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 2px solid #e2e8f0;
+
+      position: sticky;
+    }
+
+    nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero-image,
+    .gallery-image {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 16px;
+    }
+
+    .status {
+      color: #319795;
+      font-size: 22px;
+    }
+
+    .subtitle {
+      color: #4a5568;
+      max-width: 700px;
+      margin: 0 auto 25px auto;
+    }
+
+    .hero-image,
+    .gallery-image {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 16px;
+    }
+
+    h2 {
+      color: #2c7a7b;
+      margin-top: 40px;
+    }
+
+    section p,
+    section li {
+      color: #4a5568;
+      line-height: 1.8;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 2000;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #2c7a7b;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* mobile */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          position: static;
+          transform: none;
+        }
+      }
+
+      nav ul {
+        flex-direction: column;
+        background: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1999;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav li {
+        padding: 10px 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mySlides img {
+        max-height: 300px;
+      }
+      .caption {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .home, .education, .experience, .projects {
+        grid-template-columns: 1fr;
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .personal-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .personal-links .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 28px;
+      }
+      nav a {
+        font-size: 14px;
+      }
+    } 
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">Emily Ngo</a>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#project">Projects</a></li>
+        <li><a href="../index.html#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="personal-links">
+    <!-- <a href="../files/Ngo_Emily_Resume.pdf" target="_blank" class="btn">Resume</a> -->
+    <a href="https://www.linkedin.com/in/emily-ngo-/" target="_blank" class="icon-link">
+      <img src="../images/linkedin.png" alt="LinkedIn"> 
+    </a>
+    <a href="https://github.com/emilyngo001" target="_blank" class="icon-link">
+      <img src="../images/github.png" alt="GitHub">
+    </a>
+  </div>
+  
+  </header>
+
+  <main class="project-container">
+
+  <section class="hero">
+
+    <h1>
+      Stop Doom Scrolling Device
+      <span class="status">(Ongoing)</span>
+    </h1>
+
+    <p class="subtitle">
+      A Raspberry Pi-based multimedia handheld designed to do all the things I
+      actually use my phone for without the endless distractions that come with
+      social media and doom scrolling.
+    </p>
+
+    <img src="..\images\inprogressstopdoomscrollingdevice060326.jpg"
+         alt="Stop Doom Scrolling Device"
+         class="hero-image">
+    
+    <p>Currently prototyping and implementing features</p>
+
+  </section>
+
+  <section>
+    <h2>Overview</h2>
+
+    <p>
+      This project started as an attempt to build a device that could replace
+      most of the reasons I reach for my phone every day. Instead of relying on
+      my phone for everything, I wanted a dedicated handheld device for music,
+      games, photos, videos, and note-taking.
+    </p>
+
+    <p>
+      The goal wasn't to recreate a smartphone. It was to create something
+      simpler and more intentional: a device focused on the activities I enjoy
+      without notifications, social media feeds, or endless scrolling.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why I Built It</h2>
+
+    <p>
+      Like a lot of people, I realized I was spending way too much time doom
+      scrolling on my phone. The funny thing is that most of the time I wasn't
+      even picking up my phone for social media. I was picking it up to listen
+      to music, watch a video, take a picture, play a game, or write something
+      down, and then somehow I'd end up scrolling for hours.
+    </p>
+
+    <p>
+      I wanted a device that did all the things I actually use my phone for,
+      without the part where I accidentally lose hours scrolling.
+    </p>
+
+    <p>
+      So instead of downloading another productivity app, I decided it would be
+      more fun to build my own device.
+    </p>
+
+    <p>
+      I've always liked handheld gaming. I grew up playing Nintendo DS games,
+      especially Pokémon, but since the DS uses two screens and my device only
+      has one, I decided to focus on Game Boy games instead. I had never really
+      played many of the older Pokémon games, so adding Game Boy emulation felt
+      like the perfect excuse to try them out.
+    </p>
+
+    <p>
+      Music was another big reason for building it. I listen to music all the
+      time while studying, working on projects, and commuting, and I've always
+      thought dedicated MP3 players were cool. Instead of relying on streaming
+      services, I wanted a device where I could keep my own music library and
+      simply press play.
+    </p>
+
+    <p>
+      I also enjoy taking pictures and the look of older digital cameras. Since
+      I spend a lot of time watching videos and shows, I figured a video player
+      should be part of the device too.
+    </p>
+
+    <p>
+      The last feature I wanted was note-taking. I am constantly thinking of
+      project ideas or random things I want to remember later. Usually those thoughts 
+      end up buried somewhere in my phone notes, so I wanted a place where I 
+      could quickly write them down without getting distracted by everything 
+      else on my phone.
+    </p>
+  </section>
+
+</main>
+  <script>
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+
+    </script>
+</body>
+<footer>
+  © Copyright 2025 Emily Ngo
+</footer>
+</html>

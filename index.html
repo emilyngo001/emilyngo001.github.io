@@ -34,14 +34,22 @@
 
     header {
       position: sticky;
-      top:0;
+      top: 0;
       z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
-      background-color: #ffff;
+      background-color: #fff;
       border-bottom: 2px solid #e2e8f0;
+
+      position: sticky;
+    }
+
+    nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .logo {
@@ -281,11 +289,6 @@
       display: none;
     }
 
-    .mySlides img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
     .caption {
       text-align: center;
       padding: 10px;
@@ -337,7 +340,7 @@
 
     .mySlides img {
       width: 100%;
-      height: 700px; 
+      height: 100%; 
       object-fit: cover;
       border-radius: 8px;
     }
@@ -398,6 +401,13 @@
         display: flex;
       }
 
+      @media (max-width: 768px) {
+        nav {
+          position: static;
+          transform: none;
+        }
+      }
+
       nav ul {
         flex-direction: column;
         background: #ffffff;
@@ -422,7 +432,7 @@
 
     @media (max-width: 768px) {
       .mySlides img {
-        max-height: 300px;
+        max-height: 750px;
       }
       .caption {
         font-size: 14px;
@@ -484,7 +494,7 @@
       </ul>
     </nav>
     <div class="personal-links">
-    <a href="files/Ngo_Emily_Resume.pdf" target="_blank" class="btn">Resume</a>
+    <!-- <a href="files/Ngo_Emily_Resume.pdf" target="_blank" class="btn">Resume</a> -->
     <a href="https://www.linkedin.com/in/emily-ngo-/" target="_blank" class="icon-link">
       <img src="images/linkedin.png" alt="LinkedIn">
     </a>
@@ -557,6 +567,20 @@
       </div>
 
       <div class="education">
+        
+        <div class="card">
+          <div class="card-content">
+            <h2>University of Washington</h2>
+            <h3>MS, Electrical Engineering</h3>
+            <p>Sept 2026 - Present</p>
+            <p>Thesis Option</p>
+            <span class="quarter">AUTUMN 2026 (planning)</span>
+            <ul class="class-list">
+              <li class="class-item"><strong>EE 510</strong>: Mathematical Foundations of Systems Theory</li>
+              <li class="class-item"><strong>EE 525</strong>: Digital VLSI: Gates to Systems</li>
+            </ul>
+          </div>
+        </div>
 
         <div class="card">
           <div class="card-content">
@@ -778,28 +802,6 @@
         <div class="experience">
 
           <div class="card">
-            <div class="card-content">
-              <h2>Teaching Assistant</h2>
-              <a href="https://www.cs.washington.edu/" class="link">
-                <p><strong>University of Washington</strong></p>
-              </a>
-              <p>Sept 2025 - Present | Seattle, WA</p>
-              <p>Teaching Assistant for CSE/EE 475 (Embedded Systems Capstone) and EE 542 (Advanced Embedded Systems Design)</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-content">
-              <h2>Systems Engineering Intern</h2>
-              <a href="https://clearascent.co/" class="link">
-                <p><strong>Clear Ascent Corp.</strong></p>
-              </a>
-              <p>Jul 2025 - Present | Seattle, WA</p>
-              <p>Working on R&D for autonomous drones using hydrogen fuel cells</p>
-            </div>
-          </div>
-
-          <div class="card">
             <img src="images/Research.jpg" alt="Sensor Lab">
             <div class="card-content">
               <h2>Undergraduate Research Assistant</h2>
@@ -808,6 +810,28 @@
               </a>
               <p>Sep 2023 - Present | Seattle, WA</p>
               <p>Working with implementations for acoustic levitation system</p>
+            </div>
+          </div>
+
+          <!-- <div class="card">
+            <div class="card-content">
+              <h2>Systems Engineering Intern</h2>
+              <a href="https://clearascent.co/" class="link">
+                <p><strong>Clear Ascent Corp.</strong></p>
+              </a>
+              <p>Jul 2025 - Present | Seattle, WA</p>
+              <p>Working on R&D for autonomous drones using hydrogen fuel cells</p>
+            </div>
+          </div> -->
+
+          <div class="card">
+            <div class="card-content">
+              <h2>Teaching Assistant</h2>
+              <a href="https://www.cs.washington.edu/" class="link">
+                <p><strong>University of Washington</strong></p>
+              </a>
+              <p>Sept 2025 - Dec 2025 | Seattle, WA</p>
+              <p>Teaching Assistant for CSE/EE 475 (Embedded Systems Capstone) and EE 542 (Advanced Embedded Systems Design)</p>
             </div>
           </div>
 
@@ -920,6 +944,13 @@
       <h1>Projects</h1>
 
         <div class="projects">
+          <a href="projects/stopdoomscrolling.html" class="card">
+            <img src="images\inprogressstopdoomscrollingdevice060326.jpg" alt="mp3 player">
+            <div class="card-content">
+              <h2>Stop Doom Scrolling Device</h2>
+              <p>A handheld device that keeps me from doomscrolling for hours on my phone</p>
+            </div>
+          </a>
 
           <a href="https://github.com/OfferedDegrees/UW-ChatBot" class="card">
             <img src="images/uwchatbotlogo.png" alt="UW ChatBot">
@@ -954,17 +985,19 @@
       <section id="about">
         <h1>About Me :)</h1>
 
-        <p>Hi, my name is Emily Ngo and I'm a student at the University of Washington. I'm studying computer engineering to learn more about how hardware and software interact and understand what happens behind the scenes of both applications and electronics! I also enjoy creating my own projects :)</p>
+        <p>Hi, my name is Emily Ngo and I'm a student at the University of Washington. I just finished my bachelor in computer engineering and am now studying masters in electrical and computer engineering to learn more about how hardware and software interact with each other, and understand what happens behind the scenes of both applications and electronics. I wanted to continue and get my masters so that I can continue my research and learn more about hardware. I also enjoy creating my own projects :)</p>
 
         <p>I have always been fascinated by hardware and electronics. As a kid, I would spend hours taking apart electronics just to see how they worked. That curiosity grew into hands-on experience as I joined my robotics team's fabrication team throughout middle and high school, working on the electronics that created a working robot.</p>
 
-        <p>In college, I was directly admitted into the Computer Science and Engineering program to deepen my understanding of both hardware and software, learning what happens behind the screen and inside the circuits. My freshman year focused on building a strong foundation in programming, and by sophomore year, I began exploring hardware with research.</p>
+        <p>For my bachelors, I was directly admitted into the Computer Science and Engineering program to deepen my understanding of both hardware and software, learning what happens behind the screen and inside the circuits. My freshman year focused on building a strong foundation in programming, and by sophomore year, I began exploring hardware with research.</p>
 
-        <p>Junior year, I developed SproutSynch, an automatic plant watering system, with my peers and joined the UWROV underwater robotics team. This summer, I have been working with a company on research and development for an autonomous drone, combining my interests in robotics, hardware, and software into real-world innovation.</p>
+        <p>Junior year, I developed SproutSynch, an automatic plant watering system, with my peers and joined the UWROV underwater robotics team. </p> 
+         <!-- of junior year, I have been working with a company on research and development for an autonomous drone, combining my interests in robotics, hardware, and software into real-world innovation.</p> -->
 
+        <p>Senior year, I took classes that was a recommended or prereqs to apply to my masters. During this time, I learned how to use an oscillator, wavegenerator, circuit theory and basic circuitry. Also since I finished early, I started working on personal projects!</p>
         <p>Outside of academics and work, I enjoy spending time at the gym, bouldering, being with friends and family, playing video games, watching shows, painting, and experimenting with side projects for fun!</p>
 
-        <h1>Pictures from Junior Year</h1>
+        <h1>Some Pictures</h1>
         <div class="slideshow-container">
 
         <div class="mySlides fade">
@@ -1023,6 +1056,36 @@
         </div>
 
         <div class="mySlides fade">
+          <img src="images/heartClicker.jpg" alt="heart clicker">
+          <div class="caption">Made a heart shaped led clicker for valentines day &lt;3</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/ee233.jpg" alt="ee233">
+          <div class="caption">Audio equalizer circuit with three adjustable band-pass filters, connected to a laptop audio source, microphone input, and waveform generator</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/233_2.jpg" alt="ee233">
+          <div class="caption">Audio equalizer circuit connected to a speaker and oscillator for frequency response measurement and testing</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/mp3Player.jpg" alt="mp3">
+          <div class="caption">Made a MP3 player during break :)</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/mp3Player2.jpg" alt="mp3 circuit">
+          <div class="caption">MP3 circuit</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="images/inprogressstopdoomscrollingdevice060326.jpg" alt="stop doomscrolling device">
+          <div class="caption">My stop doomscrolling device that is still in progress :) I can't wait to finish it so that it's portable and thin using a pcb. I might use a PiHAT because raspberry pi zero 2 w is very rare right now :(</div>
+        </div>
+
+        <div class="mySlides fade">
           <img src="images/bouldering.png" alt="Bouldering">
           <div class="caption">My bouldering project (I hate dynos :/)</div>
         </div>
@@ -1044,6 +1107,12 @@
         <span class="dot" onclick="currentSlide(10)"></span>
         <span class="dot" onclick="currentSlide(11)"></span>
         <span class="dot" onclick="currentSlide(12)"></span>
+        <span class="dot" onclick="currentSlide(13)"></span>
+        <span class="dot" onclick="currentSlide(14)"></span>
+        <span class="dot" onclick="currentSlide(15)"></span>
+        <span class="dot" onclick="currentSlide(16)"></span>
+        <span class="dot" onclick="currentSlide(17)"></span>
+        <span class="dot" onclick="currentSlide(18)"></span>
       </div>
 
       <script>
