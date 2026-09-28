@@ -177,7 +177,10 @@
       object-fit: cover;
       display: block;
       object-position: center;
-      border-radius: 6px;
+    }
+
+    #project .card-content {
+      flex: 1;
     }
 
     .card-content {
@@ -571,9 +574,14 @@
         <div class="card">
           <div class="card-content">
             <h2>University of Washington</h2>
-            <h3>MS, Electrical Engineering</h3>
+            <h3>MS, Electrical and Computer Engineering</h3>
             <p>Sept 2026 - Present</p>
             <p>Thesis Option</p>
+            <span class="quarter">AUTUMN 2022</span>
+            <ul class="class-list">
+              <li class="class-item"><strong>EE 525</strong>: Digital VLSI: Gates to Systems</li>
+              <li class="class-item"><strong>EE 544</strong>: Computer Systems Architecture</li>
+            </ul>
             </ul>
           </div>
         </div>
@@ -800,23 +808,24 @@
           <div class="card">
             <img src="images/Research.jpg" alt="Sensor Lab">
             <div class="card-content">
-              <h2>Undergraduate Research Assistant</h2>
+              <h2>Graduate Research Assistant</h2>
               <a href="https://sensor.cs.washington.edu/" class=""link>
                 <p><strong>UW Sensor Systems Lab</strong></p>
               </a>
-              <p>Sep 2023 - Present | Seattle, WA</p>
+              <p>Sep 2026 - Present | Seattle, WA</p>
               <p>Working with implementations for acoustic levitation system</p>
             </div>
           </div>
 
           <div class="card">
+            <img src="images/Research.jpg" alt="Sensor Lab">
             <div class="card-content">
-              <h2>Systems Engineering Intern</h2>
-              <a href="https://clearascent.co/" class="link">
-                <p><strong>Clear Ascent Corp.</strong></p>
+              <h2>Undergraduate Research Assistant</h2>
+              <a href="https://sensor.cs.washington.edu/" class=""link>
+                <p><strong>UW Sensor Systems Lab</strong></p>
               </a>
-              <p>Jul 2025 - Present | Seattle, WA</p>
-              <p>Working on R&D for autonomous drones using hydrogen fuel cells</p>
+              <p>Sep 2023 - Mar 2026 | Seattle, WA</p>
+              <p>Working with implementations for acoustic levitation system</p>
             </div>
           </div>
 
@@ -939,42 +948,57 @@
      <section id="project">
       <h1>Projects</h1>
 
-        <div class="projects">
-          <a href="projects/stopdoomscrolling.html" class="card">
-            <img src="images\inprogressstopdoomscrollingdevice060326.jpg" alt="mp3 player">
-            <div class="card-content">
-              <h2>Stop Doom Scrolling Device</h2>
-              <p>A handheld device that keeps me from doomscrolling for hours on my phone</p>
-            </div>
-          </a>
+      <div class="projects">
+        <a href="https://github.com/emilyngo001/OsuKeypad" class="card">
+          <img src="images/osukeypad.jpg" alt="osu keypad">
+          <div class="card-content">
+            <h2>osu Keypad</h2>
+            <p>A 2-key USB keypad for osu!, built on an RP2040-Zero and written in MicroPython</p>
+          </div>
+        </a>
 
-          <a href="https://github.com/OfferedDegrees/UW-ChatBot" class="card">
-            <img src="images/uwchatbotlogo.png" alt="UW ChatBot">
-            <div class="card-content">
-              <h2>UW ChatBot</h2>
-              <p><strong>CSE 403 (Software Engineer)</strong></p>
-              <p>Project Manager, UI/ Frontend Engineer</p>
-            </div>
-          </a>
+        <a href="https://www.youtube.com/shorts/wTzTigW7M_Y" class="card">
+          <img src="images/mp3playerr.jpg" alt="mp3 player">
+          <div class="card-content">
+            <h2>MP3 Player</h2>
+            <p>MP3 Player using DFPlayer Mini</p>
+          </div>
+        </a>
 
-          <a href="https://sites.google.com/uw.edu/team9website/product-team-intro?authuser=0" class="card">
-            <img src="images/embedded.jpg" alt="Smart Glasses">
-            <div class="card-content">
-              <h2>Smart Glasses</h2>
-              <p><strong>CSE 475 (Embedded Systems Capstone)</strong></p>
-              <p>Embedded System/ Hardware Team, Backend Engineer</p>
-            </div>
-          </a>
+        <a href="projects/stopdoomscrolling.html" class="card">
+          <img src="images/inprogressstopdoomscrollingdevice060326.jpg" alt="stop doom scrolling device">
+          <div class="card-content">
+            <h2>Stop Doom Scrolling Device</h2>
+            <p>A handheld device that keeps me from doomscrolling for hours on my phone</p>
+          </div>
+        </a>
 
-          <a href="https://github.com/emilyngo001/FMRadioTuningSystem" class="card">
-            <img src="images/FMRadio.jpg" alt="FM Radio Tuning System">
-            <div class="card-content">
-              <h2>FM Radio Tuning System</h2>
-              <p><strong>CSE 462 (Wireless Communication)</strong></p>
-            </div>
-          </a>
+        <a href="https://github.com/OfferedDegrees/UW-ChatBot" class="card">
+          <img src="images/uwchatbotlogo.png" alt="UW ChatBot">
+          <div class="card-content">
+            <h2>UW ChatBot</h2>
+            <p><strong>CSE 403 (Software Engineer)</strong></p>
+            <p>Project Manager, UI/ Frontend Engineer</p>
+          </div>
+        </a>
 
-        </div>
+        <a href="https://sites.google.com/uw.edu/team9website/product-team-intro?authuser=0" class="card">
+          <img src="images/embedded.jpg" alt="Smart Glasses">
+          <div class="card-content">
+            <h2>Smart Glasses</h2>
+            <p><strong>CSE 475 (Embedded Systems Capstone)</strong></p>
+            <p>Embedded System/ Hardware Team, Backend Engineer</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/emilyngo001/FMRadioTuningSystem" class="card">
+          <img src="images/FMRadio.jpg" alt="FM Radio Tuning System">
+          <div class="card-content">
+            <h2>FM Radio Tuning System</h2>
+            <p><strong>CSE 462 (Wireless Communication)</strong></p>
+          </div>
+        </a>
+      </div>
      </section>
 
      <!-- ABOUT ME SECTION -->
@@ -991,6 +1015,8 @@
          <!-- of junior year, I have been working with a company on research and development for an autonomous drone, combining my interests in robotics, hardware, and software into real-world innovation.</p> -->
 
         <p>During my senior year, I took classes that were recommended or prerequisites for my master's program. During this time, I learned how to use an oscilloscope, wave generator, circuit theory, and basic circuitry. Also, since I finished early, I started working on personal projects!</p>
+        <p>Update: I was sick all summer so I couldn't finish up my personal projects :((</p>
+
         <p>Outside of academics and work, I enjoy spending time at the gym, bouldering, being with friends and family, playing video games, watching shows, painting, and experimenting with side projects for fun!</p>
 
         <h1>Some Pictures</h1>
